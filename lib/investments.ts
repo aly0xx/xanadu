@@ -116,4 +116,9 @@ export const INVESTMENTS: Investment[] = [
     logo: '/investments/jing.png',
     overview: '',
   },
+  {
+    name: 'Only Invite',
+    logo: '/investments/only-invite.png',
+    overview: '',
+  },
 ]
