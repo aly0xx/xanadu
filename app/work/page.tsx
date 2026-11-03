@@ -1,17 +1,13 @@
 import { readFileSync } from 'node:fs'
 import path from 'node:path'
 import Link from 'next/link'
-import { getSubsidiary } from '../../lib/subsidiaries'
-import { INVESTMENTS } from '../../lib/investments'
 import { CUSTOMERS } from '../../lib/customers'
-import PortfolioGrid from '../../components/PortfolioGrid'
-import TradingCarousel from '../../components/TradingCarousel'
 
 export const metadata = {
   alternates: { canonical: '/work' },
   title: 'Our Work — Xanadu',
   description:
-    'A look at the companies, ventures, projects, and clients across the Xanadu ecosystem — from AI-built startups to global trade corridors.',
+    'A look at the customers across the Xanadu ecosystem, served by our subsidiaries across MENA and beyond.',
 }
 
 /**
@@ -29,8 +25,6 @@ function logoSize(src: string) {
 }
 
 export default function WorkPage() {
-  const trading = getSubsidiary('trading')!
-
   return (
     <main className="relative min-h-screen pt-16" style={{ background: 'var(--bg-primary)' }}>
       <article className="section-container pt-16 md:pt-24 pb-24">
@@ -44,82 +38,11 @@ export default function WorkPage() {
           className="text-4xl sm:text-5xl font-bold mb-6 leading-tight max-w-2xl"
           style={{ fontFamily: 'var(--font-heading)' }}
         >
-          Built across the ecosystem.
+          Xanadu&apos;s portfolio
         </h1>
-        <p
-          className="text-lg leading-relaxed mb-16 max-w-2xl"
-          style={{ color: 'var(--text-secondary)' }}
-        >
-          A snapshot of the companies, ventures, projects, and clients that
-          make up the Xanadu portfolio — built by our subsidiaries across
-          MENA and beyond.
-        </p>
-
-        {/* ── Trading ── */}
-        <section aria-labelledby="work-trading" className="mb-20">
-          <div className="flex items-baseline justify-between gap-4 mb-5 flex-wrap">
-            <h2
-              id="work-trading"
-              className="text-2xl sm:text-3xl font-bold"
-              style={{ fontFamily: 'var(--font-heading)' }}
-            >
-              {trading.name} — trade corridors & manufacturers
-            </h2>
-            <Link
-              href={`/subsidiaries/${trading.id}`}
-              className="text-sm font-medium"
-              style={{ color: 'var(--text-muted)', fontFamily: 'var(--font-heading)' }}
-            >
-              Explore Trading →
-            </Link>
-          </div>
-          <PortfolioGrid items={trading.portfolio ?? []} accent={trading.color} heading="Some of our Earliest Manufacturers & Distributors" />
-          <TradingCarousel companies={trading.portfolio ?? []} accent={trading.color} />
-        </section>
-
-        {/* ── Projects ── */}
-        <section aria-labelledby="work-projects" className="mb-20">
-          <h2
-            id="work-projects"
-            className="text-2xl sm:text-3xl font-bold mb-8"
-            style={{ fontFamily: 'var(--font-heading)' }}
-          >
-            Projects
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-14">
-            {INVESTMENTS.map((inv) => (
-              <div key={inv.name} className="investment-card investment-card--open">
-                <div className="investment-logo-frame investment-logo-frame--open mb-5">
-                  {inv.logo ? (
-                    // eslint-disable-next-line @next/next/no-img-element -- investment brand logo
-                    <img src={inv.logo} alt={`${inv.name} logo`} loading="lazy" />
-                  ) : (
-                    <span aria-hidden="true">{inv.name.slice(0, 2).toUpperCase()}</span>
-                  )}
-                </div>
-                <h3 className="text-lg font-semibold mb-2" style={{ color: '#D9B00D' }}>{inv.name}</h3>
-                <p className="text-sm m-0" style={{ color: 'var(--text-secondary)' }}>{inv.overview}</p>
-              </div>
-            ))}
-          </div>
-          <Link
-            href="/investments"
-            className="inline-flex items-center gap-2 mt-8 text-sm font-medium"
-            style={{ color: 'var(--text-muted)', fontFamily: 'var(--font-heading)' }}
-          >
-            Explore Investments →
-          </Link>
-        </section>
 
         {/* ── Customers ── */}
-        <section aria-labelledby="work-customers" className="mb-20">
-          <h2
-            id="work-customers"
-            className="text-2xl sm:text-3xl font-bold mb-4"
-            style={{ fontFamily: 'var(--font-heading)' }}
-          >
-            Customers
-          </h2>
+        <section className="mb-20">
           <p className="text-base leading-relaxed mb-8 max-w-2xl" style={{ color: 'var(--text-secondary)' }}>
             Some of the companies our subsidiaries work with across MENA and beyond.
           </p>

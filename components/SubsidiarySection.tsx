@@ -19,8 +19,7 @@ interface SubsidiarySectionProps {
    * 'summary' (default) — home-page teaser: name + logo + one-liner +
    * a "Learn more" link to the detail page. Heavy copy lives on the
    * detail route.
-   * 'full' — detail-page layout: about, services, clients, partners,
-   * portfolio.
+   * 'full' — detail-page layout: about, services, partners, portfolio.
    */
   variant?: 'summary' | 'full'
   /** This subsidiary's logo image (the emitter). Omitted for divisions without a logo. */
@@ -29,16 +28,12 @@ interface SubsidiarySectionProps {
   contentClassName?: string
   /** Detail page: extra "About Us" paragraph beyond `description`. */
   aboutText?: string
-  /** Detail page: named clients (logo chip if available). */
-  clients?: LogoEntry[]
-  /** Detail page: fallback line for the Clients block when no client is nameable. */
-  clientsNote?: string
   /** Detail page: partners / alliances (logo chip if available). */
   partners?: LogoEntry[]
   children?: React.ReactNode
 }
 
-/** A client/partner chip — logo image when an asset exists, text chip otherwise. */
+/** A partner chip — logo image when an asset exists, text chip otherwise. */
 function LogoChip({ entry, accent }: { entry: LogoEntry; accent: string }) {
   if (entry.logo) {
     return (
@@ -83,8 +78,6 @@ export default function SubsidiarySection({
   logo,
   contentClassName,
   aboutText,
-  clients,
-  clientsNote,
   partners,
   children,
 }: SubsidiarySectionProps) {
@@ -201,24 +194,6 @@ export default function SubsidiarySection({
                   </p>
                 )}
               </div>
-
-              {/* Clients */}
-              {(clients?.length || clientsNote) && (
-                <div className="reveal-item mb-10">
-                  <p className="text-xs uppercase tracking-[0.25em] mb-4" style={{ color: 'var(--text-muted)' }}>Clients</p>
-                  {clients?.length ? (
-                    <div className="flex flex-wrap gap-3">
-                      {clients.map((c) => (
-                        <LogoChip key={c.name} entry={c} accent={color} />
-                      ))}
-                    </div>
-                  ) : (
-                    <p className="text-sm leading-relaxed" style={{ color: 'var(--text-secondary)', maxWidth: '640px' }}>
-                      {clientsNote}
-                    </p>
-                  )}
-                </div>
-              )}
 
               {/* Partners */}
               {partners?.length ? (

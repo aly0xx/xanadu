@@ -54,11 +54,6 @@ export interface Subsidiary {
   /** Detail page: extra "About Us" paragraph beyond `description` (from the
    *  subsidiary's company profile). */
   aboutText?: string
-  /** Detail page: named clients (logo chip if available). */
-  clients?: LogoEntry[]
-  /** Detail page: fallback line for the Clients block when no client is
-   *  nameable in the profile (e.g. a reach stat instead of logos). */
-  clientsNote?: string
   /** Detail page: partners / alliances (logo chip if available). */
   partners?: LogoEntry[]
 }
@@ -85,7 +80,7 @@ export const SUBSIDIARIES: Subsidiary[] = [
     contentClassName: 'max-w-xl mx-auto md:mx-0 md:ml-8 md:max-w-[min(80vw,920px)]',
     aboutText:
       "Unlike traditional consulting firms, we don't just create strategies; we work alongside you to execute them — backed by 15+ years across MENA, a proven methodology, and a wide network spanning fintech, e-commerce, SaaS, and digital transformation. With offices in Egypt, Oman, and Mauritius, we bridge global ideas with MENA realities.",
-    clients: [
+    partners: [
       { name: 'Gem', logo: '/partners/consulting/Gem .PNG' },
       { name: 'Zilla Capital', logo: '/partners/consulting/Zilla capital.PNG' },
       { name: 'CIGP', logo: '/partners/consulting/cigp.png' },
@@ -123,8 +118,6 @@ export const SUBSIDIARIES: Subsidiary[] = [
     contentClassName: 'max-w-xl mx-auto md:mx-0 md:ml-8 md:max-w-[min(70vw,840px)]',
     aboutText:
       'Our mission is to empower local businesses by enhancing their capabilities through innovative technologies tailored to regional needs. Our vision: to be the premier bridge between global technological innovation and local business success in the MENA region — driving digital transformation through strategic partnerships and localized expertise.',
-    clientsNote:
-      '1,000+ delivered projects across five MENA countries — serving hospitality, retail, manufacturing, logistics, legal, and distribution clients with 95% client satisfaction.',
     partners: [
       { name: 'Bibliovation', logo: '/partners/soft/Bibliovation.png' },
       { name: 'Asfaleia', logo: '/partners/soft/asfaleia.png' },
@@ -158,8 +151,6 @@ export const SUBSIDIARIES: Subsidiary[] = [
     contentClassName: 'max-w-xl mx-auto md:mx-0 md:ml-8 md:max-w-[min(80vw,920px)]',
     aboutText:
       'We redefine the future of sports marketing, management, and innovation — igniting brand power, elevating sports passion, and expanding global reach. Our differentiators: deep expertise in local market dynamics and global sports trends, end-to-end solutions for brands, clubs, and athletes, and exclusive partnerships with global sports organizations.',
-    clientsNote:
-      'Reaching 1.5+ billion sports fans worldwide through DBR broadcast technology — with 40M+ followers across the MENA region and access to all Big 5 football leagues.',
     partners: [
       { name: 'Connect Sports', logo: '/partners/sports/connect-sports.png' },
       { name: 'Entourage', logo: '/partners/sports/entourage.png' },
@@ -188,8 +179,6 @@ export const SUBSIDIARIES: Subsidiary[] = [
     contentClassName: 'max-w-xl mx-auto md:mx-0 md:ml-8 md:max-w-[min(80vw,920px)]',
     aboutText:
       'Our approach combines three advantages: an AI-powered framework (rapid prototyping, MVP creation, and market launch), an experienced team with a proven track record of building, scaling, and exiting startups, and record-pace launch through a 6-week venture-building pipeline — idea, productization, design and architecture, development, marketing and GTM, launch, and CEO partnership. Focus: MENA region, sector-agnostic, idea to seed — Egypt-first.',
-    clientsNote:
-      'A growing portfolio of early-stage companies across the sharing economy, esports, fintech, e-commerce, and AI — built at 3x speed by combining human expertise with AI acceleration.',
     portfolio: [
       { name: 'SEK', tag: 'Sharing Economy', logo: '/investments/sek.png', desc: 'Self-governed, community-based marketplaces for renting items — solving trust and accessibility in the sharing economy. Product ready.' },
       { name: 'HERU', tag: 'Esports', logo: '/investments/heru.jpeg', desc: 'The esports arena for gamers, organizers, and sponsors across MENA — streamlining tournaments and building player communities. Product ready.' },
@@ -214,8 +203,6 @@ export const SUBSIDIARIES: Subsidiary[] = [
     contentClassName: 'max-w-xl mx-auto md:mx-0 md:ml-8 md:max-w-[min(80vw,920px)]',
     aboutText:
       'We open the right doors through strategic market access and direct manufacturer-buyer connections — then handle international distribution, trade positioning, and negotiation so supply turns into real opportunity.',
-    clientsNote:
-      'Working with manufacturers and distributors across industrials, food and agri, and pharmaceuticals — from Egyptian factories to UK-licensed distributors serving Africa and the Middle East.',
     portfolio: [
       { name: 'Standard Electric', logo: '/partners/trading/standard_electric.png', desc: 'Egyptian industrial electrical accessories manufacturer since 1995. IEC & BS compliant switch systems.' },
       { name: 'Food Trip — Spuds', logo: '/partners/trading/food_trip.png', desc: 'Premium kettle-cooked chips from Egypt. 10+ flavors, distributed in 23 countries.' },
@@ -243,8 +230,6 @@ export const SUBSIDIARIES: Subsidiary[] = [
     contentClassName: 'max-w-xl mx-auto md:mx-0 md:ml-8 md:max-w-[min(96vw,1040px)]',
     aboutText:
       "Crypto's growth challenge is hyper-saturation: 10,000+ assets competing for the same mindshare, major ad platforms restricting crypto advertising, and 73% of potential holders citing lack of trust as their #1 barrier. We built the answer as one integrated growth engine — Awareness (sports marketing) → Adoption (elite UX/UI) → Retention (omnichannel CX) → Trust (security and compliance) — combining deep MENA expertise, global reach, and a 100% crypto-native team.",
-    clientsNote:
-      '168+ global customers served by our design organization alone — alongside crypto-native teams, exchanges, and protocols across MENA and beyond.',
     partners: [
       { name: 'Cede Hub', logo: '/partners/web3/cede-hub.png' },
       { name: 'Flow Traders', logo: '/partners/web3/flowtraders.png' },

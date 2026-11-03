@@ -17,8 +17,6 @@ export interface Investment {
   logo?: string
   /** Company website, or its LinkedIn page when there is no working site. */
   url?: string
-  /** Link text when `url` is neither a website nor LinkedIn (e.g. a press release). */
-  urlLabel?: string
   overview: string
   services?: string[]
   value?: string
@@ -44,7 +42,6 @@ export const INVESTMENTS: Investment[] = [
     name: 'Foras Fen',
     logo: '/investments/El Foras Fain.png',
     url: 'https://www.zawya.com/en/press-release/events-and-conferences/stem-entrepreneurship-center-platform-powers-al-foras-fein-q7s98ajb',
-    urlLabel: 'Press release',
     overview: 'A business discovery platform sharing opportunities, market insights, and emerging trends.',
     services: ['Curate business opportunities', 'Market insights & news', 'Emerging sector highlights'],
     value: 'Acts as an opportunity engine — giving access to deals before they become widely visible.',
@@ -108,5 +105,15 @@ export const INVESTMENTS: Investment[] = [
     logo: '/investments/adltix.png',
     url: 'https://adltix.com',
     overview: 'AI-powered creator performance marketing for MENA, where brands pay only for attributed sales.',
+  },
+  {
+    name: 'SEK',
+    logo: '/investments/sek.png',
+    overview: 'Self-governed, community-based marketplaces for renting items, solving trust and accessibility in the sharing economy.',
+  },
+  {
+    name: 'Jing',
+    logo: '/investments/jing.png',
+    overview: '',
   },
 ]

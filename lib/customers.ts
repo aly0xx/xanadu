@@ -32,4 +32,7 @@ export const CUSTOMERS: LogoEntry[] = [
   { name: 'Daily Dose', logo: '/customers/daily-dose.png' },
   { name: 'Dayra Camp', logo: '/customers/dayra-camp.png' },
   { name: 'Cairo Runners', logo: '/customers/cairo-runners.png' },
+  { name: 'Standard Electric', logo: '/customers/standard-electric.png' },
+  { name: 'Food Trip — Spuds', logo: '/customers/food-trip.png' },
+  { name: 'Rich Land', logo: '/customers/rich-land.png' },
 ]

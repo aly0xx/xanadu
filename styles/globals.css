@@ -317,30 +317,6 @@ h1, h2, h3, h4, h5, h6 {
   cursor: default;
 }
 
-.investment-toggle {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-}
-
-.investment-toggle-icon {
-  display: inline-flex;
-  height: 1.5rem;
-  width: 1.5rem;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid rgba(217, 176, 13, 0.35);
-  border-radius: 999px;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1;
-}
-
-.investment-details {
-  border-top: 1px solid rgba(15, 23, 42, 0.08);
-}
-
 .text-gradient {
   background: linear-gradient(135deg, #0f172a 0%, #475569 100%);
   -webkit-background-clip: text;
