@@ -5,7 +5,7 @@ export const metadata = {
   alternates: { canonical: '/about' },
   title: 'About Us — Xanadu',
   description:
-    'Xanadu is a multi-disciplinary business group founded and led by Hessain Al Menawy — building and scaling businesses across emerging sectors in MENA with global vision and local execution.',
+    '',
 }
 
 const MISSION = [
@@ -42,12 +42,9 @@ export default function AboutPage() {
           className="text-lg leading-relaxed mb-12"
           style={{ color: 'var(--text-secondary)' }}
         >
-          A multi-disciplinary business group founded and led by Hessain Al
-          Menawy, continuing a legacy of entrepreneurship and innovation in
-          the MENA region — building and scaling businesses across emerging
-          sectors through a business development lens. We bring international
-          thinking and digital-first strategies to local opportunities, with
-          offices across Egypt, Oman, and Mauritius.
+          Xanadu Group leverages its extensive reach, wide network of strategic partners, and years of experience in growth management, backed by thousands of projects and deals, to create value across Digital Transformation & AI, Trading, Web3, Sports, and Startups. Through our subsidiaries and investments in high-growth companies across high-growth sectors, we aim to build lasting impact and sustainable growth for the businesses within our ecosystem.
+
+Through Xanadu Consulting, we remain open to new partnerships and collaborations with companies and strategic partners, creating mutual value by leveraging the capabilities of our subsidiaries and portfolio companies. Our mission is to connect businesses with the right opportunities, expertise, and networks to accelerate growth, expand market reach, and achieve long-term success.
         </p>
 
         {/* ── Mission ── */}
@@ -145,11 +142,7 @@ export default function AboutPage() {
               Founder of Xanadu Group
             </p>
             <p className="text-base leading-relaxed mb-4" style={{ color: 'var(--text-secondary)' }}>
-              Hessain Al Menawy leads a multi-disciplinary business group
-              across MENA — building more than just companies. Under his
-              leadership, Xanadu is building the foundation of a
-              next-generation family office that will shape the future of
-              MENA business.
+              With over 15 years of experience in Business Development, Hessain Al Menawy founded Xanadu Group to build on his proven track record of establishing high-impact partnerships across diverse sectors. Through an extensive network of local and international partners, Xanadu Group aims to accelerate the growth of high-potential companies by facilitating access to strategic opportunities, resources, and markets across the region, while bridging the gap between leading international players and the MENA market.
             </p>
             <p className="text-base leading-relaxed italic" style={{ color: 'var(--text-muted)' }}>
               &ldquo;Global vision, local execution — a continuous system for
