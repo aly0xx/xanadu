@@ -114,11 +114,11 @@ export const INVESTMENTS: Investment[] = [
   {
     name: 'Jing',
     logo: '/investments/jing.png',
-    overview: '',
+    overview: 'A Xanadu Group portfolio brand, backed through our investment arm.',
   },
   {
     name: 'Only Invite',
     logo: '/investments/only-invite.png',
-    overview: '',
+    overview: 'A private, WhatsApp-native event invitation platform for curated guest lists.',
   },
 ]
