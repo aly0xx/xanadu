@@ -56,6 +56,8 @@ export interface Subsidiary {
   aboutText?: string
   /** Detail page: partners / alliances (logo chip if available). */
   partners?: LogoEntry[]
+  /** Detail page: customers (logo chip if available), shown below partners. */
+  customers?: LogoEntry[]
 }
 
 export const SUBSIDIARIES: Subsidiary[] = [
@@ -125,6 +127,10 @@ export const SUBSIDIARIES: Subsidiary[] = [
       { name: 'Cloudbeds', logo: '/partners/soft/cloudbeds.png' },
       { name: 'OriginCX', logo: '/partners/soft/origincx.png' },
       { name: 'Tremoloo', logo: '/partners/soft/tremoloo.png' },
+    ],
+    customers: [
+      { name: 'Dayra Camp', logo: '/customers/dayra-camp-horizontal.png' },
+      { name: 'Syntheia', logo: '/customers/syntheia.png' },
     ],
   },
   {

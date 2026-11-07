@@ -30,6 +30,8 @@ interface SubsidiarySectionProps {
   aboutText?: string
   /** Detail page: partners / alliances (logo chip if available). */
   partners?: LogoEntry[]
+  /** Detail page: customers (logo chip if available). */
+  customers?: LogoEntry[]
   children?: React.ReactNode
 }
 
@@ -79,6 +81,7 @@ export default function SubsidiarySection({
   contentClassName,
   aboutText,
   partners,
+  customers,
   children,
 }: SubsidiarySectionProps) {
   const sectionRef = useRef<HTMLElement>(null)
@@ -202,6 +205,18 @@ export default function SubsidiarySection({
                   <div className="flex flex-wrap gap-3">
                     {partners.map((p) => (
                       <LogoChip key={p.name} entry={p} accent={color} />
+                    ))}
+                  </div>
+                </div>
+              ) : null}
+
+              {/* Customers */}
+              {customers?.length ? (
+                <div className="reveal-item mb-10">
+                  <p className="text-xs uppercase tracking-[0.25em] mb-4" style={{ color: 'var(--text-muted)' }}>Customers</p>
+                  <div className="flex flex-wrap gap-3">
+                    {customers.map((c) => (
+                      <LogoChip key={c.name} entry={c} accent={color} />
                     ))}
                   </div>
                 </div>
