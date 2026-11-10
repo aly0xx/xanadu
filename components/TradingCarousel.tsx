@@ -36,7 +36,7 @@ interface TradingCarouselProps {
   companies: PortfolioItem[]
   /** Subsidiary accent color (controls + indicator tint). */
   accent: string
-  /** Label above the track, styled like the PortfolioGrid heading. */
+  /** Label above the track, styled like the subsidiary section labels. */
   heading?: string
 }
 

@@ -32,6 +32,8 @@ interface SubsidiarySectionProps {
   partners?: LogoEntry[]
   /** Detail page: customers (logo chip if available). */
   customers?: LogoEntry[]
+  /** Detail page: portfolio companies (logo chip if available). */
+  portfolio?: LogoEntry[]
   children?: React.ReactNode
 }
 
@@ -66,6 +68,21 @@ function LogoChip({ entry, accent }: { entry: LogoEntry; accent: string }) {
   )
 }
 
+/** A labelled row of logo chips (Partners / Customers / Portfolio). */
+function LogoRow({ label, entries, accent }: { label: string; entries?: LogoEntry[]; accent: string }) {
+  if (!entries?.length) return null
+  return (
+    <div className="reveal-item mb-10">
+      <p className="text-xs uppercase tracking-[0.25em] mb-4" style={{ color: 'var(--text-muted)' }}>{label}</p>
+      <div className="flex flex-wrap gap-3">
+        {entries.map((e) => (
+          <LogoChip key={e.name} entry={e} accent={accent} />
+        ))}
+      </div>
+    </div>
+  )
+}
+
 export default function SubsidiarySection({
   id,
   name,
@@ -82,6 +99,7 @@ export default function SubsidiarySection({
   aboutText,
   partners,
   customers,
+  portfolio,
   children,
 }: SubsidiarySectionProps) {
   const sectionRef = useRef<HTMLElement>(null)
@@ -198,29 +216,9 @@ export default function SubsidiarySection({
                 )}
               </div>
 
-              {/* Partners */}
-              {partners?.length ? (
-                <div className="reveal-item mb-10">
-                  <p className="text-xs uppercase tracking-[0.25em] mb-4" style={{ color: 'var(--text-muted)' }}>Partners</p>
-                  <div className="flex flex-wrap gap-3">
-                    {partners.map((p) => (
-                      <LogoChip key={p.name} entry={p} accent={color} />
-                    ))}
-                  </div>
-                </div>
-              ) : null}
-
-              {/* Customers */}
-              {customers?.length ? (
-                <div className="reveal-item mb-10">
-                  <p className="text-xs uppercase tracking-[0.25em] mb-4" style={{ color: 'var(--text-muted)' }}>Customers</p>
-                  <div className="flex flex-wrap gap-3">
-                    {customers.map((c) => (
-                      <LogoChip key={c.name} entry={c} accent={color} />
-                    ))}
-                  </div>
-                </div>
-              ) : null}
+              <LogoRow label="Partners" entries={partners} accent={color} />
+              <LogoRow label="Customers" entries={customers} accent={color} />
+              <LogoRow label="Portfolio" entries={portfolio} accent={color} />
 
               {/* Custom content (portfolio, etc.) */}
               {children && <div className="reveal-item mb-10">{children}</div>}

@@ -8,7 +8,6 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { ComposableMap, Geographies, Geography, useMapContext } from 'react-simple-maps'
 import worldMap from 'world-atlas/countries-110m.json'
 import SubsidiarySection from '../components/SubsidiarySection'
-import PortfolioGrid from '../components/PortfolioGrid'
 import { getSubsidiary, SUBSIDIARIES } from '../lib/subsidiaries'
 import { INVESTMENTS } from '../lib/investments'
 import { scrollToId } from '../lib/scroll'
@@ -78,9 +77,8 @@ export const Xw3Section = memo(function Xw3Section(props: SectionProps) {
   return <SubsidiaryHomeSection {...props} id="xw3" />
 })
 
-export const VenturesSection = memo(function VenturesSection({ variant }: SectionProps) {
-  const { portfolio, ...subsidiary } = getSubsidiary('ventures')!
-  return <SubsidiarySection {...subsidiary} variant={variant}>{portfolio && <PortfolioGrid items={portfolio} accent={subsidiary.color} variant="tagged" />}</SubsidiarySection>
+export const VenturesSection = memo(function VenturesSection(props: SectionProps) {
+  return <SubsidiaryHomeSection {...props} id="ventures" />
 })
 
 export const TradingSection = memo(function TradingSection({ variant }: SectionProps) {
