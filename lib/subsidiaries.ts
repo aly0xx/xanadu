@@ -13,7 +13,7 @@
 export interface PortfolioItem {
   name: string
   tag?: string
-  desc: string
+  desc?: string
   logo?: string
   stealth?: boolean
 }
@@ -214,6 +214,10 @@ export const SUBSIDIARIES: Subsidiary[] = [
       { name: 'Food Trip — Spuds', logo: '/partners/trading/food_trip.png', desc: 'Premium kettle-cooked chips from Egypt. 10+ flavors, distributed in 23 countries.' },
       { name: 'EPG Pharma', logo: '/partners/trading/epg_pharma.png', desc: 'UK-licensed pharmaceutical distributor serving Africa and the Middle East. GMP/MHRA compliant.' },
       { name: 'Rich Land', logo: '/partners/trading/rich_land.png', desc: 'Large-scale agri-food producer. 5000+ acres, ISO/FDA/BRC certified. Full private-label manufacturing.' },
+      { name: 'Heim', logo: '/partners/trading/heim.png' },
+      { name: 'Nunu', logo: '/partners/trading/nunu.png', desc: 'Egyptian baby care brand — gentle shampoos, baths, and skincare for babies.' },
+      { name: 'Food Stuff', logo: '/partners/trading/food_stuff.png' },
+      { name: 'Penta Pharma', logo: '/partners/trading/penta_pharma.png', desc: 'Egyptian generic pharmaceutical manufacturer. EDA-approved portfolio, ISO 9001 facility, exporting across Africa and the Middle East.' },
     ],
   },
   {
